@@ -19,6 +19,17 @@ function cuar_theme_declare_supported_features() {
 	add_theme_support( 'customer-area.navigation-menu' );
 	
 	//-------------------------------------------------------------------------------------------------------------
+	// Tells Customer Area that this theme is providing single post templates for the private content and 
+	// containers. The plugin will disabled the settings linked to 'single post footer' for the given post types.
+	//--
+	add_theme_support( 'customer-area.single-post-templates', array( 
+			'cuar_private_file', 	// Customize display in file single-cuar_private_file.php
+			'cuar_private_page',  	// Customize display in file single-cuar_private_page.php
+			'cuar_conversation',  	// Customize display in file single-cuar_conversation.php
+			'cuar_project',  	 	// Customize display in file single-cuar_project.php
+		) );
+	
+	//-------------------------------------------------------------------------------------------------------------
 	// Tells Customer Area that this theme is already providing its own styles and javascript files for the  
 	// jquery.select2 library (otherwise, this library's files would be taken from the Customer Area plugin folder)
 	// This is also a way to disable those libraries if you want to use an alternative. In that case, you should 
