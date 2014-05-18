@@ -4,14 +4,44 @@
  * Declare the features that are supported by your theme
  */
 function cuar_theme_declare_supported_features() {
-
+	// if ( true ) return; // Remove or comment this line to see the following code in action
+	
+	//-------------------------------------------------------------------------------------------------------------
 	// Tells Customer Area that this theme is providing its own stylesheet (will hide CSS settings from the plugin 
 	// options page)
+	//--
 	add_theme_support( 'customer-area.stylesheet' );
 	
+	//-------------------------------------------------------------------------------------------------------------
 	// Tells Customer Area that this theme is already outputting the Customer Area navigation menu somewhere (will 
 	// hide automatic navigation menu printing settings from the plugin options page)
+	//--
 	add_theme_support( 'customer-area.navigation-menu' );
+	
+	//-------------------------------------------------------------------------------------------------------------
+	// Tells Customer Area that this theme is already providing its own styles and javascript files for the  
+	// jquery.select2 library (otherwise, this library's files would be taken from the Customer Area plugin folder)
+	// This is also a way to disable those libraries if you want to use an alternative. In that case, you should 
+	// also take care to write the corresponding javascript code and include the proper files (JS/CSS).
+	//--
+	
+	// For instance, the following line tells the plugin that we will take care of including the files required for
+	// the jQuery Select2 script. However, the plugin is still responsible for writing the markup to enable the 
+	// jQuery Select2 library on the appropriate elements.
+	add_theme_support( 'customer-area.library.jquery.select2', array( 'files' ) );
+	
+	// If we want to disable jQuery Select2 and replace it with our own alternative, we should tell the plugin that 
+	// not only we don't want it to include the files, but that we don't want it to output any related markup.
+	add_theme_support( 'customer-area.library.jquery.select2', array( 'files', 'markup' ) );
+	
+	// Other libraries that may be also disabled/taken care of. If we don't specify an array as a parameter, the 
+	// plugin assumes that the theme is taking care of everything for that library
+	add_theme_support( 'customer-area.library.bootstrap.dropdown' );
+	add_theme_support( 'customer-area.library.bootstrap.transition' );
+	add_theme_support( 'customer-area.library.bootstrap.collapse' );
+	
+	
+	//-------------------------------------------------------------------------------------------------------------
 }
 add_action( 'after_setup_theme', 'cuar_theme_declare_supported_features' );
 
