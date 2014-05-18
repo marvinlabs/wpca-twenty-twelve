@@ -31,11 +31,11 @@ function cuar_theme_declare_supported_features() {
 	add_theme_support( 'customer-area.library.jquery.select2', array( 'files' ) );
 	
 	// If we want to disable jQuery Select2 and replace it with our own alternative, we should tell the plugin that 
-	// not only we don't want it to include the files, but that we don't want it to output any related markup.
+	// not only we don't want it to include the files, but also that we don't want it to output any related markup.
 	add_theme_support( 'customer-area.library.jquery.select2', array( 'files', 'markup' ) );
 	
 	// Other libraries that may be also disabled/taken care of. If we don't specify an array as a parameter, the 
-	// plugin assumes that the theme is taking care of everything for that library
+	// plugin assumes that the theme is taking care of everything for that library (files, markup, ...)
 	add_theme_support( 'customer-area.library.bootstrap.dropdown' );
 	add_theme_support( 'customer-area.library.bootstrap.transition' );
 	add_theme_support( 'customer-area.library.bootstrap.collapse' );
