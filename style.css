@@ -1,0 +1,13 @@
+/*
+ Theme Name:   Sample Customer Area theme
+ Theme URI:    http://customer-area.marvinlabs.com
+ Description:  Sample theme for Customer Area developers (as child of the default Twenty Twelve Theme)
+ Author:       Vincent Mimoun-Prat @ MarvinLabs
+ Author URI:   http://www.marvinlabs.com
+ Template:     twentytwelve
+ Version:      1.0.0
+ Tags:         customer-area
+ Text Domain:  twenty-twelve-cuar
+*/
+
+@import url("../twentytwelve/style.css");
