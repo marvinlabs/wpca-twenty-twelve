@@ -1,13 +1,38 @@
 /*
- Theme Name:   Sample Customer Area theme
+ Theme Name:   WPCA - Twenty Twelve
  Theme URI:    http://customer-area.marvinlabs.com
- Description:  Sample theme for Customer Area developers (as child of the default Twenty Twelve Theme)
+ Description:  A Twenty-Twelve child theme optimized for WP Customer Area.
  Author:       Vincent Mimoun-Prat @ MarvinLabs
  Author URI:   http://www.marvinlabs.com
  Template:     twentytwelve
  Version:      1.0.0
  Tags:         customer-area
- Text Domain:  twenty-twelve-cuar
+ Text Domain:  wpca-twenty-twelve
 */
 
-@import url("../twentytwelve/style.css");
+.entry-header {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 35px;
+}
+
+.entry-header .entry-title {
+	color: #333;
+	font-size: 22px;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-bottom: 1px solid #333;
+	margin-bottom: -1px;
+	width: auto;
+	display: inline-block;
+	padding-bottom: 15px;
+}
+
+.cuar-page h3 {
+	color: #636363;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-bottom: 1px dotted #ccc;
+	padding-bottom: 10px;
+	margin-bottom: 35px;
+}
