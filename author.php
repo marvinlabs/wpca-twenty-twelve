@@ -29,7 +29,7 @@ get_header(); ?>
 			?>
 
 			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Author Archives: %s', 'twentytwelve' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
+				<h1 class="archive-title"><?php printf( __( 'Author Archives: %s', 'wpcatt' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
 			</header><!-- .archive-header -->
 
 			<?php
@@ -40,7 +40,7 @@ get_header(); ?>
 				rewind_posts();
 			?>
 
-			<?php twentytwelve_content_nav( 'nav-above' ); ?>
+			<?php wpcatt_content_nav( 'nav-above' ); ?>
 
 			<?php
 			// If a user has filled out their description, show a bio on their entries.
@@ -55,12 +55,12 @@ get_header(); ?>
 					 *
 					 * @param int $size The height and width of the avatar in pixels.
 					 */
-					$author_bio_avatar_size = apply_filters( 'twentytwelve_author_bio_avatar_size', 68 );
+					$author_bio_avatar_size = apply_filters( 'wpcatt_author_bio_avatar_size', 68 );
 					echo get_avatar( get_the_author_meta( 'user_email' ), $author_bio_avatar_size );
 					?>
 				</div><!-- .author-avatar -->
 				<div class="author-description">
-					<h2><?php printf( __( 'About %s', 'twentytwelve' ), get_the_author() ); ?></h2>
+					<h2><?php printf( __( 'About %s', 'wpcatt' ), get_the_author() ); ?></h2>
 					<p><?php the_author_meta( 'description' ); ?></p>
 				</div><!-- .author-description	-->
 			</div><!-- .author-info -->
@@ -71,7 +71,7 @@ get_header(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 
-			<?php twentytwelve_content_nav( 'nav-below' ); ?>
+			<?php wpcatt_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
