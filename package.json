@@ -1,8 +1,8 @@
 {
     "name" : "wpca-twentytwelve",
-    "version" : "2.0.0",
+    "version" : "2.0.1",
     "description" : "A Twenty-Twelve based theme optimized for the WP Customer Area plugin suite.",
-    "textDomain" : "twentytwelve",
+    "textDomain" : "wpcatt",
     "author" : {
         "name" : "Vincent Mimoun-Prat",
         "email" : "vincent@marvinlabs.com",

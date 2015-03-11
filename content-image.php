@@ -10,7 +10,7 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="entry-content">
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
+			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wpcatt' ) ); ?>
 		</div><!-- .entry-content -->
 
 		<footer class="entry-meta">
@@ -20,9 +20,9 @@
 			</a>
 			<?php if ( comments_open() ) : ?>
 			<div class="comments-link">
-				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
+				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'wpcatt' ) . '</span>', __( '1 Reply', 'wpcatt' ), __( '% Replies', 'wpcatt' ) ); ?>
 			</div><!-- .comments-link -->
 			<?php endif; // comments_open() ?>
-			<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'wpcatt' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post -->
