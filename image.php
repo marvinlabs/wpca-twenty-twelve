@@ -4,9 +4,9 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+ * @package TwentyTwelvePlus
+ *
+ * @since Twenty Twelve Plus 1.0
  */
 
 get_header(); ?>
@@ -23,7 +23,7 @@ get_header(); ?>
 						<footer class="entry-meta">
 							<?php
 								$metadata = wp_get_attachment_metadata();
-								printf( __( '<span class="meta-prep meta-prep-entry-date">Published </span> <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>.', 'wpcatt' ),
+								printf( __( '<span class="meta-prep meta-prep-entry-date">Published </span> <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>.', 'twenty-twelve-plus' ),
 									esc_attr( get_the_date( 'c' ) ),
 									esc_html( get_the_date() ),
 									esc_url( wp_get_attachment_url() ),
@@ -34,12 +34,12 @@ get_header(); ?>
 									get_the_title( $post->post_parent )
 								);
 							?>
-							<?php edit_post_link( __( 'Edit', 'wpcatt' ), '<span class="edit-link">', '</span>' ); ?>
+							<?php edit_post_link( __( 'Edit', 'twenty-twelve-plus' ), '<span class="edit-link">', '</span>' ); ?>
 						</footer><!-- .entry-meta -->
 
 						<nav id="image-navigation" class="navigation" role="navigation">
-							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous', 'wpcatt' ) ); ?></span>
-							<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;', 'wpcatt' ) ); ?></span>
+							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous', 'twenty-twelve-plus' ) ); ?></span>
+							<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;', 'twenty-twelve-plus' ) ); ?></span>
 						</nav><!-- #image-navigation -->
 					</header><!-- .entry-header -->
 
@@ -77,7 +77,7 @@ endif;
 								/**
  								 * Filter the image attachment size to use.
 								 *
-								 * @since Twenty Twelve 1.0
+								 * @since Twenty Twelve Plus 1.0
 								 *
 								 * @param array $size {
 								 *     @type int The attachment height in pixels.
@@ -99,7 +99,7 @@ endif;
 
 						<div class="entry-description">
 							<?php the_content(); ?>
-							<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'wpcatt' ), 'after' => '</div>' ) ); ?>
+							<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twenty-twelve-plus' ), 'after' => '</div>' ) ); ?>
 						</div><!-- .entry-description -->
 
 					</div><!-- .entry-content -->

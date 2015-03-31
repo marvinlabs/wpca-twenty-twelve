@@ -2,9 +2,9 @@
 /**
  * The template for displaying Search Results pages
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+ * @package TwentyTwelvePlus
+ *
+ * @since Twenty Twelve Plus 1.0
  */
 
 get_header(); ?>
@@ -15,7 +15,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'wpcatt' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twenty-twelve-plus' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header>
 
 			<?php wpcatt_content_nav( 'nav-above' ); ?>
@@ -31,11 +31,11 @@ get_header(); ?>
 
 			<article id="post-0" class="post no-results not-found">
 				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'Nothing Found', 'wpcatt' ); ?></h1>
+					<h1 class="entry-title"><?php _e( 'Nothing Found', 'twenty-twelve-plus' ); ?></h1>
 				</header>
 
 				<div class="entry-content">
-					<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'wpcatt' ); ?></p>
+					<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twenty-twelve-plus' ); ?></p>
 					<?php get_search_form(); ?>
 				</div><!-- .entry-content -->
 			</article><!-- #post-0 -->

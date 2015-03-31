@@ -12,9 +12,9 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+ * @package TwentyTwelvePlus
+ *
+ * @since Twenty Twelve Plus 1.0
  */
 
 get_header(); ?>
@@ -26,13 +26,13 @@ get_header(); ?>
 			<header class="archive-header">
 				<h1 class="archive-title"><?php
 					if ( is_day() ) :
-						printf( __( 'Daily Archives: %s', 'wpcatt' ), '<span>' . get_the_date() . '</span>' );
+						printf( __( 'Daily Archives: %s', 'twenty-twelve-plus' ), '<span>' . get_the_date() . '</span>' );
 					elseif ( is_month() ) :
-						printf( __( 'Monthly Archives: %s', 'wpcatt' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'wpcatt' ) ) . '</span>' );
+						printf( __( 'Monthly Archives: %s', 'twenty-twelve-plus' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twenty-twelve-plus' ) ) . '</span>' );
 					elseif ( is_year() ) :
-						printf( __( 'Yearly Archives: %s', 'wpcatt' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'wpcatt' ) ) . '</span>' );
+						printf( __( 'Yearly Archives: %s', 'twenty-twelve-plus' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'twenty-twelve-plus' ) ) . '</span>' );
 					else :
-						_e( 'Archives', 'wpcatt' );
+						_e( 'Archives', 'twenty-twelve-plus' );
 					endif;
 				?></h1>
 			</header><!-- .archive-header -->

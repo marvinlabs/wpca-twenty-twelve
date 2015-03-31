@@ -2,9 +2,9 @@
 /**
  * The template for displaying posts in the Status post format
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+ * @package TwentyTwelvePlus
+ *
+ * @since Twenty Twelve Plus 1.0
  */
 ?>
 
@@ -12,13 +12,13 @@
 		<div class="entry-header">
 			<header>
 				<h1><?php the_author(); ?></h1>
-				<h2><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'wpcatt' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php echo get_the_date(); ?></a></h2>
+				<h2><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twenty-twelve-plus' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php echo get_the_date(); ?></a></h2>
 			</header>
 			<?php
 			/**
 			 * Filter the status avatar size.
 			 *
-			 * @since Twenty Twelve 1.0
+			 * @since Twenty Twelve Plus 1.0
 			 *
 			 * @param int $size The height and width of the avatar in pixels.
 			 */
@@ -28,15 +28,15 @@
 		</div><!-- .entry-header -->
 
 		<div class="entry-content">
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wpcatt' ) ); ?>
+			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twenty-twelve-plus' ) ); ?>
 		</div><!-- .entry-content -->
 
 		<footer class="entry-meta">
 			<?php if ( comments_open() ) : ?>
 			<div class="comments-link">
-				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'wpcatt' ) . '</span>', __( '1 Reply', 'wpcatt' ), __( '% Replies', 'wpcatt' ) ); ?>
+				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twenty-twelve-plus' ) . '</span>', __( '1 Reply', 'twenty-twelve-plus' ), __( '% Replies', 'twenty-twelve-plus' ) ); ?>
 			</div><!-- .comments-link -->
 			<?php endif; // comments_open() ?>
-			<?php edit_post_link( __( 'Edit', 'wpcatt' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'twenty-twelve-plus' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post -->
