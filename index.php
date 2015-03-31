@@ -9,9 +9,9 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+ * @package TwentyTwelvePlus
+ *
+ * @since Twenty Twelve Plus 1.0
  */
 
 get_header(); ?>
@@ -35,22 +35,22 @@ get_header(); ?>
 				// Show a different message to a logged-in user who can add posts.
 			?>
 				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'No posts to display', 'wpcatt' ); ?></h1>
+					<h1 class="entry-title"><?php _e( 'No posts to display', 'twenty-twelve-plus' ); ?></h1>
 				</header>
 
 				<div class="entry-content">
-					<p><?php printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'wpcatt' ), admin_url( 'post-new.php' ) ); ?></p>
+					<p><?php printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'twenty-twelve-plus' ), admin_url( 'post-new.php' ) ); ?></p>
 				</div><!-- .entry-content -->
 
 			<?php else :
 				// Show the default message to everyone else.
 			?>
 				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'Nothing Found', 'wpcatt' ); ?></h1>
+					<h1 class="entry-title"><?php _e( 'Nothing Found', 'twenty-twelve-plus' ); ?></h1>
 				</header>
 
 				<div class="entry-content">
-					<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'wpcatt' ); ?></p>
+					<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'twenty-twelve-plus' ); ?></p>
 					<?php get_search_form(); ?>
 				</div><!-- .entry-content -->
 			<?php endif; // end current_user_can() check ?>

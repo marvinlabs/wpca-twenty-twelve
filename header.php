@@ -34,8 +34,8 @@
 		</hgroup>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h3 class="menu-toggle"><?php _e( 'Menu', 'wpcatt' ); ?></h3>
-			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'wpcatt' ); ?>"><?php _e( 'Skip to content', 'wpcatt' ); ?></a>
+			<h3 class="menu-toggle"><?php _e( 'Menu', 'twenty-twelve-plus' ); ?></h3>
+			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twenty-twelve-plus' ); ?>"><?php _e( 'Skip to content', 'twenty-twelve-plus' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 

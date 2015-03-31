@@ -7,9 +7,9 @@
  * handled by a callback to wpcatt_comment() which is
  * located in the functions.php file.
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+ * @package TwentyTwelvePlus
+ *
+ * @since Twenty Twelve Plus 1.0
  */
 
 /*
@@ -28,7 +28,7 @@ if ( post_password_required() )
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-				printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'wpcatt' ),
+				printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'twenty-twelve-plus' ),
 					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 			?>
 		</h2>
@@ -39,9 +39,9 @@ if ( post_password_required() )
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="navigation" role="navigation">
-			<h1 class="assistive-text section-heading"><?php _e( 'Comment navigation', 'wpcatt' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'wpcatt' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'wpcatt' ) ); ?></div>
+			<h1 class="assistive-text section-heading"><?php _e( 'Comment navigation', 'twenty-twelve-plus' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'twenty-twelve-plus' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'twenty-twelve-plus' ) ); ?></div>
 		</nav>
 		<?php endif; // check for comment navigation ?>
 
@@ -50,7 +50,7 @@ if ( post_password_required() )
 		 * But we only want the note on posts and pages that had comments in the first place.
 		 */
 		if ( ! comments_open() && get_comments_number() ) : ?>
-		<p class="nocomments"><?php _e( 'Comments are closed.' , 'wpcatt' ); ?></p>
+		<p class="nocomments"><?php _e( 'Comments are closed.' , 'twenty-twelve-plus' ); ?></p>
 		<?php endif; ?>
 
 	<?php endif; // have_comments() ?>
