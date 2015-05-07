@@ -45,10 +45,12 @@
 	</header><!-- #masthead -->
 
 	<div id="main" class="wrapper">
-	
+
 <?php
-	if ( cuar_is_customer_area_page( get_queried_object_id() )
-			|| cuar_is_customer_area_private_content( get_queried_object_id() ) ) {
+	if (class_exists('CUAR_Plugin')
+        && (cuar_is_customer_area_page(get_queried_object_id())
+			|| cuar_is_customer_area_private_content(get_queried_object_id())))
+    {
 		cuar_the_customer_area_menu();
 	}
 ?>
