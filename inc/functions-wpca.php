@@ -68,14 +68,14 @@ add_action('after_setup_theme', 'cuar_theme_declare_supported_features');
  */
 function cuar_theme_custom_nav_walker($args)
 {
-    require_once('wp_bootstrap_navwalker.php');
+    require_once('bootstrap-nav-walker.class.php');
 
     $args['depth'] = 2;
     $args['container'] = 'div';
     $args['container_class'] = 'cuar-collapse cuar-navbar-collapse cuar-nav-container';
     $args['menu_class'] = 'cuar-nav cuar-navbar-nav';
-    $args['fallback_cb'] = 'wp_bootstrap_navwalker::fallback';
-    $args['walker'] = new wp_bootstrap_navwalker();
+    $args['fallback_cb'] = 'CUAR_BootstrapNavWalker::fallback';
+    $args['walker'] = new CUAR_BootstrapNavWalker();
 
     return $args;
 }
