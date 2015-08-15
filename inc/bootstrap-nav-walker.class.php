@@ -19,7 +19,7 @@ class CUAR_BootstrapNavWalker extends Walker_Nav_Menu {
 	 */
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat( "\t", $depth );
-		$output .= "\n$indent<ul role=\"menu\" class=\" cuar-dropdown-menu\">\n";
+		$output .= "\n$indent<ul role=\"menu\" class=\" dropdown-menu dropdown-menu-right\">\n";
 	}
 
 	/**
@@ -44,13 +44,13 @@ class CUAR_BootstrapNavWalker extends Walker_Nav_Menu {
 		 * a 0 if the strings are equal.
 		 */
 		if ( strcasecmp( $item->attr_title, 'divider' ) == 0 && $depth === 1 ) {
-			$output .= $indent . '<li role="presentation" class="cuar-divider">';
+			$output .= $indent . '<li role="presentation" class="divider">';
 		} else if ( strcasecmp( $item->title, 'divider') == 0 && $depth === 1 ) {
-			$output .= $indent . '<li role="presentation" class="cuar-divider">';
-		} else if ( strcasecmp( $item->attr_title, 'cuar-dropdown-header') == 0 && $depth === 1 ) {
-			$output .= $indent . '<li role="presentation" class="cuar-dropdown-header">' . esc_attr( $item->title );
+			$output .= $indent . '<li role="presentation" class="divider">';
+		} else if ( strcasecmp( $item->attr_title, 'dropdown-header') == 0 && $depth === 1 ) {
+			$output .= $indent . '<li role="presentation" class="dropdown-header">' . esc_attr( $item->title );
 		} else if ( strcasecmp($item->attr_title, 'disabled' ) == 0 ) {
-			$output .= $indent . '<li role="presentation" class="cuar-disabled"><a href="#">' . esc_attr( $item->title ) . '</a>';
+			$output .= $indent . '<li role="presentation" class="disabled"><a href="#">' . esc_attr( $item->title ) . '</a>';
 		} else {
 
 			$class_names = $value = '';
@@ -64,7 +64,7 @@ class CUAR_BootstrapNavWalker extends Walker_Nav_Menu {
 				$class_names .= ' dropdown';
 
 			if ( in_array( 'current-menu-item', $classes ) )
-				$class_names .= ' cuar-active';
+				$class_names .= ' active';
 
 			$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
@@ -82,7 +82,7 @@ class CUAR_BootstrapNavWalker extends Walker_Nav_Menu {
 			if ( $args->has_children && $depth === 0 ) {
 				$atts['href']   		= '#';
 				$atts['data-toggle']	= 'dropdown';
-				$atts['class']			= 'cuar-dropdown-toggle';
+				$atts['class']			= 'dropdown-toggle';
 			} else {
 				$atts['href'] = ! empty( $item->url ) ? $item->url : '';
 			}

@@ -72,8 +72,8 @@ function cuar_theme_custom_nav_walker($args)
 
     $args['depth'] = 2;
     $args['container'] = 'div';
-    $args['container_class'] = 'cuar-collapse cuar-navbar-collapse cuar-nav-container';
-    $args['menu_class'] = 'cuar-nav cuar-navbar-nav';
+    $args['container_class'] = 'collapse navbar-collapse nav-container';
+    $args['menu_class'] = 'nav navbar-nav';
     $args['fallback_cb'] = 'CUAR_BootstrapNavWalker::fallback';
     $args['walker'] = new CUAR_BootstrapNavWalker();
 
