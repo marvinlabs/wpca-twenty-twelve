@@ -87,10 +87,13 @@ add_filter('cuar/core/page/nav-menu-args', 'cuar_theme_custom_nav_walker');
  */
 function cuar_body_class($classes)
 {
+    if ( !class_exists('CUAR_Plugin'))
+    {
+        return $classes;
+    }
+
     $post_type = get_post_type();
-    $private_post_types = array_merge(
-        CUAR_Plugin::get_instance()->get_content_post_types(),
-        CUAR_Plugin::get_instance()->get_container_post_types());
+    $private_post_types = CUAR_Plugin::get_instance()->get_private_post_types();
 
     if (in_array($post_type, $private_post_types))
     {
