@@ -1,0 +1,35 @@
+{
+  "name" : "wpca-twentytwelve",
+  "version" : "2.2.0",
+  "description" : "A Twenty-Twelve based theme optimized for the WP Customer Area plugin suite.",
+  "type": "wordpress-theme",
+  "homepage": "http://wp-customerarea.com/downloads/wpca-twentytwelve-plus/",
+  "authors": [
+    {
+      "name": "Marvinlabs",
+      "email": "contact@marvinlabs.com",
+      "homepage": "http://marvinlabs.com/"
+    },
+    {
+      "name": "Vincent Mimoun-Prat",
+      "homepage": "http://vincentprat.info/",
+      "role": "Developer"
+    },
+    {
+      "name": "Thomas Lartaud",
+      "homepage": "http://thomaslartaud.com/",
+      "role": "Designer"
+    }
+  ],
+  "extra": {
+    "textDomain": "cuartt",
+    "slug": "wpca-twentytwelve"
+  },
+  "require": {
+    "php": ">=5.3"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "vendor-dir": "vendor/composer"
+  }
+}
