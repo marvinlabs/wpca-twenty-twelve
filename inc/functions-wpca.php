@@ -104,6 +104,13 @@ function cuar_body_class($classes)
 }
 
 add_filter('body_class', 'cuar_body_class');
+
+/**
+ * Get the entry class for the main content block so the default .entry-content class does not override our styles
+ */
+function cuar_entry_class(){
+    return ( function_exists('cuar_is_customer_area_page') && ( cuar_is_customer_area_page( get_queried_object_id() ) || cuar_is_customer_area_private_content( get_the_ID() ) ) ) ? 'wpca-content' : 'entry-content';
+}
  
  
  

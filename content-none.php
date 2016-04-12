@@ -13,7 +13,7 @@
 			<h1 class="entry-title"><?php _e( 'Nothing Found', 'twenty-twelve-plus' ); ?></h1>
 		</header>
 
-		<div class="entry-content">
+		<div class="<?php echo cuar_entry_class(); ?>">
 			<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'twenty-twelve-plus' ); ?></p>
 			<?php get_search_form(); ?>
 		</div><!-- .entry-content -->

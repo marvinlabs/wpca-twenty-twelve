@@ -8,6 +8,8 @@
  *
  * @since Twenty Twelve Plus 1.0
  */
+
+
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -40,7 +42,7 @@
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 		<?php else : ?>
-		<div class="entry-content">
+		<div class="<?php echo cuar_entry_class(); ?>">
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twenty-twelve-plus' ) ); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twenty-twelve-plus' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->

@@ -11,7 +11,7 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="aside">
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-			<div class="entry-content">
+			<div class="<?php echo cuar_entry_class(); ?>">
 				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twenty-twelve-plus' ) ); ?>
 			</div><!-- .entry-content -->
 		</div><!-- .aside -->

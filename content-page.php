@@ -16,7 +16,7 @@
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		</header>
 
-		<div class="entry-content">
+		<div class="<?php echo cuar_entry_class(); ?>">
 			<?php the_content(); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twenty-twelve-plus' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->

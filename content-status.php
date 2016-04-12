@@ -27,7 +27,7 @@
 			?>
 		</div><!-- .entry-header -->
 
-		<div class="entry-content">
+		<div class="<?php echo cuar_entry_class(); ?>">
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twenty-twelve-plus' ) ); ?>
 		</div><!-- .entry-content -->
 
