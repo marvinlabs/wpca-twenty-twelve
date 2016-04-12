@@ -93,7 +93,7 @@ function cuar_body_class($classes)
     }
 
     $post_type = get_post_type();
-    $private_post_types = CUAR_Plugin::get_instance()->get_private_post_types();
+    $private_post_types = cuar()->get_private_post_types();
 
     if (in_array($post_type, $private_post_types))
     {
