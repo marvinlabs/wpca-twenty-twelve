@@ -53,7 +53,7 @@
 #main {
     position: relative;
 }
-.cuar-menu-overflow-fix {
+#main > .cuar-css-wrapper.cuar-menu-overflow-fix {
     position: absolute;
     z-index: initial;
     width: 100%;
@@ -62,7 +62,7 @@
     background: none;
     border: none;
 }
-.cuar-menu-overflow-fix + #primary {
+#main > .cuar-css-wrapper.cuar-menu-overflow-fix + #primary {
     z-index: 2;
     position: relative;
     top: 50px;
