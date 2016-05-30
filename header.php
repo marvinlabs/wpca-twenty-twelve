@@ -55,9 +55,20 @@
 	<div id="main" class="wrapper">
 	
 <?php
-	if ( cuar_is_customer_area_page( get_queried_object_id() )
-			|| cuar_is_customer_area_private_content( get_queried_object_id() ) ) {
-		cuar_the_customer_area_menu();
+	/**
+	 * HACKED MENU !
+	 * -------------
+	 * This hack allow you to display the WPCA menu outside of our main container.
+	 * We call this a hacked menu because of a CSS overflow issue : See styles.css for more information.
+	 * ---
+	 * You will not be able to display the menu outside of our main container without using the hack in styles.css
+	 * ---
+	 * Turn off customer-area.navigation-menu theme_support in functions.php if you experience any issue with the menu,
+	 * or if you want it back to the original location.
+	 */
+	if ( ( cuar_is_customer_area_page( get_queried_object_id() )
+			|| cuar_is_customer_area_private_content( get_queried_object_id() ) ) && current_theme_supports( 'customer-area.navigation-menu' ) ) {
+		cuar_the_customer_area_menu(true, 'cuar-css-wrapper cuar-menu-overflow-fix');
 	}
 ?>
 	
