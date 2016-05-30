@@ -44,11 +44,8 @@
  For this solution to work properly, we need to make sure that the parent div is position: relative;
  ----------------
  If you experience any issue with the menu positioning, you should turn off the feature that allow you to move the
- menu outside our container :
- - Comment in functions.php the line :
-   add_theme_support('customer-area.navigation-menu');
- - In header.php, remove the arguments of the function cuar_the_customer_area_menu so it looks like this :
-   cuar_the_customer_area_menu();
+ menu outside our container. To do that, comment in functions.php the line :
+ add_theme_support('customer-area.navigation-menu');
 */
 #main {
     position: relative;
