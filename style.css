@@ -64,6 +64,10 @@
     position: relative;
     top: 50px;
 }
+#main > .cuar-css-wrapper.cuar-menu-overflow-fix .navbar-collapse.collapse.in {
+    z-index: 1000;
+    position: relative;
+}
 /*
  ----------------
  MENU HACK : End
