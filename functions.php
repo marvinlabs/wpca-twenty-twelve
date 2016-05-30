@@ -17,7 +17,7 @@ function cuar_theme_declare_supported_features()
     // Tells Customer Area that this theme is already outputting the Customer Area navigation menu somewhere (will
     // hide automatic navigation menu printing settings from the plugin options page)
     //--
-    add_theme_support('customer-area.navigation-menu');
+    //add_theme_support('customer-area.navigation-menu');
 
     //-------------------------------------------------------------------------------------------------------------
     // Tells Customer Area that this theme is providing single post templates for the private content and
