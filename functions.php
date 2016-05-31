@@ -17,7 +17,7 @@ function cuar_theme_declare_supported_features()
     // Tells Customer Area that this theme is already outputting the Customer Area navigation menu somewhere (will
     // hide automatic navigation menu printing settings from the plugin options page)
     //--
-    add_theme_support('customer-area.navigation-menu');
+//    add_theme_support('customer-area.navigation-menu');
 
     //-------------------------------------------------------------------------------------------------------------
     // Tells Customer Area that this theme is providing single post templates for the private content and
@@ -28,6 +28,7 @@ function cuar_theme_declare_supported_features()
 //			'cuar_private_page',  	// Customize display in file single-cuar_private_page.php
 //			'cuar_conversation',  	// Customize display in file single-cuar_conversation.php
 //			'cuar_project',  	 	// Customize display in file single-cuar_project.php
+//			'cuar_tasklist',  	 	// Customize display in file single-cuar_tasklist.php
 //		) );
 
     //-------------------------------------------------------------------------------------------------------------
@@ -57,31 +58,6 @@ function cuar_theme_declare_supported_features()
 }
 
 add_action('after_setup_theme', 'cuar_theme_declare_supported_features');
-
-
-/**
- * This is how you would provide your own nav menu walker to change the navigation menu's markup (here, we'd use a
- * class to output bootstrap-friendly markup).
- *
- * Note that this only changes how the menu items are output. To change the wrapping of the menu itself, please
- * override the template "customer-pages-navigation-menu.template.php"
- */
-function cuar_theme_custom_nav_walker($args)
-{
-    require_once('includes/cuar_bootstrap_navwalker.php');
-
-    $args['depth'] = 2;
-    $args['container'] = 'div';
-    $args['container_class'] = 'collapse navbar-collapse nav-container';
-    $args['menu_class'] = 'nav navbar-nav';
-    $args['fallback_cb'] = 'wp_bootstrap_navwalker::fallback';
-    $args['walker'] = new CUAR_BootstrapNavWalker();
-
-    return $args;
-}
-
-add_filter('cuar/core/page/nav-menu-args', 'cuar_theme_custom_nav_walker');
-
 
 /**
  * Load the style sheet from the parent theme.
