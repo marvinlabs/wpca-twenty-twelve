@@ -1,1 +1,1 @@
-See also our documentation about the template system of WP Customer Area: http://wp-customerarea.com/documentation/the-template-system/
+See also our documentation about the template system of Customer Area: http://customer-area.marvinlabs.com/documentation/advanced-topics/template-system-customer-area/
