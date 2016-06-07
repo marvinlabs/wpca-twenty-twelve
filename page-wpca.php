@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Full-width Page Template, No Sidebar
+ * Template Name: WP Customer Area Page Template
  *
  * Description: Twenty Twelve loves the no-sidebar look as much as
  * you do. Use this page template to remove the sidebar from any page.

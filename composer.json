@@ -1,9 +1,18 @@
 {
-  "name" : "wpca-twentytwelve",
-  "version" : "2.2.0",
-  "description" : "A Twenty-Twelve based theme optimized for the WP Customer Area plugin suite.",
+  "name": "marvinlabs/wpca-twentytwelve",
   "type": "wordpress-theme",
+  "description": "A Twenty-Twelve based theme optimized for the WP Customer Area plugin suite.",
+  "version": "3.0.0",
   "homepage": "http://wp-customerarea.com/downloads/wpca-twentytwelve-plus/",
+  "license": "GPL-3.0",
+  "keywords": [
+    "wordpress",
+    "customer",
+    "area",
+    "private",
+    "dashboard",
+    "theme"
+  ],
   "authors": [
     {
       "name": "Marvinlabs",
@@ -21,6 +30,12 @@
       "role": "Designer"
     }
   ],
+  "support": {
+    "source": "https://github.com/marvinlabs/wpca-twenty-twelve",
+    "issues": "https://github.com/marvinlabs/wpca-twenty-twelve/issues",
+    "forum": "http://wp-customerarea.com/support/",
+    "docs": "http://wp-customerarea.com/documentation/"
+  },
   "extra": {
     "textDomain": "cuartt",
     "slug": "wpca-twentytwelve"
