@@ -85,7 +85,7 @@ function cuar_body_class($classes)
     if ( !class_exists('CUAR_Plugin')) return $classes;
 
     if (function_exists('cuar_is_customer_area_page')
-        && (cuar_is_customer_area_page(get_queried_object_id())
+        && (cuar_is_customer_area_page(get_queried_object())
             || cuar_is_customer_area_private_content(get_the_ID()))
     ) {
         $classes[] = 'full-width';
@@ -107,7 +107,7 @@ add_filter('body_class', 'cuar_body_class');
 function cuar_content_width()
 {
     if (function_exists('cuar_is_customer_area_page')
-        && (cuar_is_customer_area_page(get_queried_object_id())
+        && (cuar_is_customer_area_page(get_queried_object())
             || cuar_is_customer_area_private_content(get_the_ID()))
     ) {
         global $content_width;
@@ -123,7 +123,7 @@ add_action('template_redirect', 'cuar_content_width');
 function cuar_entry_class()
 {
     if (function_exists('cuar_is_customer_area_page')
-        && (cuar_is_customer_area_page(get_queried_object_id())
+        && (cuar_is_customer_area_page(get_queried_object())
             || cuar_is_customer_area_private_content(get_the_ID()))
     ) {
         return 'wpca-content';
